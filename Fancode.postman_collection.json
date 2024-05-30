@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "1aceb544-e88b-4944-8c20-3d7f5b20fe05",
+		"name": "Fancode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25345217"
+	},
+	"item": [
+		{
+			"name": "health",
+			"item": [
+				{
+					"name": "getHealth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/health",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "matches",
+			"item": [
+				{
+					"name": "getMatches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/matches",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"matches"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sport",
+			"item": [
+				{
+					"name": "getAllSportsToursAndMatches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/sport/tour/match",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sport",
+								"tour",
+								"match"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tours",
+			"item": [
+				{
+					"name": "getAllTours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tours",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMatchesByTourName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tour/matches/?name=Indian Premier League, 2023",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tour",
+								"matches",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Indian Premier League, 2023"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "news",
+			"item": [
+				{
+					"name": "createNewsMatch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test title\",\r\n    \"description\": \"test desc\",\r\n    \"sport_id\": 1,\r\n    \"match_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/news/match",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"news",
+								"match"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createNewsTour",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test title\",\r\n    \"description\": \"test desc\",\r\n    \"tour_id\": 1,\r\n    \"sport_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/news/tour",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"news",
+								"tour"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getNewsByMatchId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getNewsByTourId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getNewsBySportId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
